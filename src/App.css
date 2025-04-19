@@ -1,0 +1,15 @@
+/* Import Navbar component CSS */
+@import url('./components/Navbar.css');
+
+/* Import Footer component CSS */
+@import url('./components/Footer.css');
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}

@@ -1,0 +1,147 @@
+.portfolio-page {
+  padding-top: 80px;
+}
+
+/* Portfolio Filter */
+.portfolio-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 2rem 0;
+}
+
+.portfolio-filter button {
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio-filter button:hover {
+  background-color: rgba(75, 108, 183, 0.1);
+}
+
+.portfolio-filter button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-content {
+  padding: 2rem;
+}
+
+.document-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: rgba(75, 108, 183, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.document-icon svg {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.document-icon span {
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+  font-weight: 600;
+}
+
+.portfolio-content h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.8rem;
+}
+
+.portfolio-content p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.portfolio-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* No Items Message */
+.no-items-message {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.no-items-message p {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Portfolio Contact Section */
+.portfolio-contact {
+  background-color: var(--light-bg);
+  text-align: center;
+  padding: 4rem 0;
+  margin-top: 2rem;
+}
+
+.portfolio-contact h2 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.portfolio-contact p {
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .portfolio-filter {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-actions {
+    flex-direction: column;
+  }
+}
