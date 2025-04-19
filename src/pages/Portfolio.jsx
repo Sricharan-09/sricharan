@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload, faExternalLinkAlt, faFile } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import capstoneProject from '../assets/capstoneProject.pdf';
 import internshipCertification from '../assets/internshipCertification.pdf';
 import summerInternshipFinal from '../assets/summerInternshipFinal.docx';
@@ -128,7 +129,7 @@ const Portfolio = () => {
         <div className="container">
           <h2>Looking for Collaboration?</h2>
           <p>I'm open to discussing projects, opportunities, and ideas related to digital technologies in the pharmaceutical sector.</p>
-          <a href="/contact" className="btn">Get in Touch</a>
+          <Link to="/contact" className="btn">Get in Touch</Link>
         </div>
       </section>
     </div>
