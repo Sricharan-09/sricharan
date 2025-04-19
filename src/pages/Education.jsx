@@ -1,10 +1,21 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faMapMarkerAlt, faCertificate } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 import macroEconomicsCert from '../assets/macroEconomicsCert.jpg';
 import businessCaseDevCert from '../assets/businessCaseDevCert.jpg';
 import './Education.css';
 
 const Education = () => {
+  const [previewImage, setPreviewImage] = useState(null);
+
+  const openImagePreview = (imageSrc) => {
+    setPreviewImage(imageSrc);
+  };
+
+  const closeImagePreview = () => {
+    setPreviewImage(null);
+  };
+
   return (
     <div className="education-page">
       <section className="education-header section">
@@ -13,6 +24,15 @@ const Education = () => {
           <p className="section-subtitle">My academic journey and qualifications</p>
         </div>
       </section>
+
+      {previewImage && (
+        <div className="image-preview-overlay" onClick={closeImagePreview}>
+          <div className="image-preview-container">
+            <img src={previewImage} alt="Certificate Preview" />
+            <button className="close-preview" onClick={closeImagePreview}>×</button>
+          </div>
+        </div>
+      )}
 
       <section className="education-timeline section">
         <div className="container">
@@ -90,8 +110,9 @@ const Education = () => {
 
           <div className="certificates-container">
             <div className="certificate-card">
-              <div className="certificate-image">
+              <div className="certificate-image" onClick={() => openImagePreview(macroEconomicsCert)}>
                 <img src={macroEconomicsCert} alt="Macroeconomics Certificate" />
+                <div className="view-certificate">Click to view</div>
               </div>
               <div className="certificate-content">
                 <h3>Macroeconomics Certification</h3>
@@ -114,8 +135,9 @@ const Education = () => {
             </div>
 
             <div className="certificate-card">
-              <div className="certificate-image">
+              <div className="certificate-image" onClick={() => openImagePreview(businessCaseDevCert)}>
                 <img src={businessCaseDevCert} alt="Business Case Development Certificate" />
+                <div className="view-certificate">Click to view</div>
               </div>
               <div className="certificate-content">
                 <h3>Business Case Development</h3>

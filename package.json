@@ -10,8 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --repo https://$GITHUB_TOKEN@github.com/Sricharan-09/sricharan.git",
-    "deploy:secure": "node deploy.js"
+    "deploy": "node deploy.js"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
