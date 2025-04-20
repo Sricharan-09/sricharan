@@ -1,51 +1,32 @@
 // filepath: c:\Users\harsh\Documents\sricharan\src\pages\Resume.jsx
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarAlt, faMapMarkerAlt, faCertificate, faGamepad, faMusic, faBookReader, faPlane, faCode, faChess, faDumbbell, faBlog, faCamera, faDownload, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt, faMapMarkerAlt, faGamepad, faMusic, faBookReader, faPlane, faCode, faChess, faDumbbell, faBlog, faCamera, faDownload, faExternalLinkAlt, faAward } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import macroEconomicsCert from '../assets/macroEconomicsCert.jpg';
-import businessCaseDevCert from '../assets/businessCaseDevCert.jpg';
-import googleCert from '../assets/google.jpg'
-import michigan from '../assets/michigan.png';
 import resume from '../assets/resume.docx';
+import { Link } from 'react-router-dom';
 import './Resume.css';
 
 const Resume = () => {
-  const [previewImage, setPreviewImage] = useState(null);
-
-  const openImagePreview = (imageSrc) => {
-    setPreviewImage(imageSrc);
-  };
-
-  const closeImagePreview = () => {
-    setPreviewImage(null);
-  };
-
   return (
     <div className="resume-page">
       <section className="resume-header section">
         <div className="container">
           <h1 className="section-title">Resume</h1>
-          <p className="section-subtitle">My academic journey and qualifications</p>
+          <p className="section-subtitle">My academic and professional journey</p>
           
-          {/* <div className="resume-actions">
-            <a href={resume} download className="btn btn-primary">
+          <div className="resume-actions">
+            {/* <a href={resume} download className="btn btn-primary">
               <FontAwesomeIcon icon={faDownload} /> Download Full Resume
             </a>
             <a href={resume} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
               <FontAwesomeIcon icon={faExternalLinkAlt} /> View Resume
-            </a>
-          </div> */}
-        </div>
-      </section>
-
-      {previewImage && (
-        <div className="image-preview-overlay" onClick={closeImagePreview}>
-          <div className="image-preview-container">
-            <img src={previewImage} alt="Certificate Preview" />
-            <button className="close-preview" onClick={closeImagePreview}>×</button>
+            </a> */}
+            {/* <Link to="/certifications" className="btn btn-secondary">
+              <FontAwesomeIcon icon={faAward} /> View My Certifications
+            </Link> */}
           </div>
         </div>
-      )}
+      </section>
 
       <section className="resume-timeline section">
         <div className="container">
@@ -109,113 +90,6 @@ const Resume = () => {
                 <p>
                   Completed Class X with distinction under the ICSE board. Gained a comprehensive foundation
                   across various subjects and participated in several extracurricular activities.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="certifications section">
-        <div className="container">
-          <h2 className="section-title">Certifications</h2>
-          <p className="section-subtitle">Additional qualifications and achievements</p>
-
-          <div className="certificates-container">
-            <div className="certificate-card">
-              <div className="certificate-image" onClick={() => openImagePreview(macroEconomicsCert)}>
-                <img src={macroEconomicsCert} alt="Macroeconomics Certificate" />
-                <div className="view-certificate">Click to view</div>
-              </div>
-              <div className="certificate-content">
-                <h3>Macroeconomics Certification</h3>
-                <div className="certificate-info">
-                  <div className="info-item">
-                    <FontAwesomeIcon icon={faCalendarAlt} />
-                    <span>Mar 2023</span>
-                  </div>
-                  <div className="info-item">
-                    <FontAwesomeIcon icon={faCertificate} />
-                    <span>Online Course</span>
-                  </div>
-                </div>
-                <p>
-                  Completed a comprehensive course on macroeconomics, gaining insights into economic 
-                  principles, market dynamics, and financial systems that are essential for understanding
-                  the broader economic context of business operations.
-                </p>
-              </div>
-            </div>
-
-            <div className="certificate-card">
-              <div className="certificate-image" onClick={() => openImagePreview(businessCaseDevCert)}>
-                <img src={businessCaseDevCert} alt="Business Case Development Certificate" />
-                <div className="view-certificate">Click to view</div>
-              </div>
-              <div className="certificate-content">
-                <h3>Business Case Development</h3>
-                <div className="certificate-info">
-                  <div className="info-item">
-                    <FontAwesomeIcon icon={faCalendarAlt} />
-                    <span>Feb 2025</span>
-                  </div>
-                  <div className="info-item">
-                    <FontAwesomeIcon icon={faCertificate} />
-                    <span>Workshop Certification</span>
-                  </div>
-                </div>
-                <p>
-                  Participated in a workshop focused on developing effective business cases. Learned 
-                  methodologies for analyzing market opportunities, evaluating business proposals, and 
-                  presenting compelling business cases to stakeholders.
-                </p>
-              </div>
-            </div>
-
-            <div className="certificate-card">
-              <div className="certificate-image" onClick={() => openImagePreview(googleCert)}>
-                <img src={googleCert} alt="Business Case Development Certificate" />
-                <div className="view-certificate">Click to view</div>
-              </div>
-              <div className="certificate-content">
-                <h3>Google Crash Couse</h3>
-                <div className="certificate-info">
-                  <div className="info-item">
-                    <FontAwesomeIcon icon={faCalendarAlt} />
-                    <span>Aug 2020</span>
-                  </div>
-                  <div className="info-item">
-                    <FontAwesomeIcon icon={faCertificate} />
-                    <span>Python Certification</span>
-                  </div>
-                </div>
-                <p>
-                    Completed Google's comprehensive Python programming course, covering fundamental 
-                    concepts including data structures, algorithms, and basic programming principles. 
-                    Developed practical coding skills through hands-on projects and problem-solving exercises.
-                </p>
-              </div>
-            </div>
-
-            <div className="certificate-card">
-              <div className="certificate-image" onClick={() => openImagePreview(michigan)}>
-                <img src={michigan} alt="Business Case Development Certificate" />
-                <div className="view-certificate">Click to view</div>
-              </div>
-              <div className="certificate-content">
-                <h3>Writing and Editing: Structure and Organization</h3>
-                <div className="certificate-info">
-                  <div className="info-item">
-                    <FontAwesomeIcon icon={faCalendarAlt} />
-                    <span>Aug 2020</span>
-                  </div>
-                  <div className="info-item">
-                    <FontAwesomeIcon icon={faCertificate} />
-                    <span>University of Michigan</span>
-                  </div>
-                </div>
-                <p>
-                    The certificate verifies a strong foundation in professional writing techniques, editorial standards, and content clarity—skills applicable across academic, creative, and workplace communications
                 </p>
               </div>
             </div>

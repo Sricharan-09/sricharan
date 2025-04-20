@@ -8,6 +8,7 @@ import Resume from './pages/Resume';
 import Extracurricular from './pages/Extracurricular';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
+import Certifications from './pages/Certifications';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="/certifications" element={<Certifications />} />
             <Route path="/extracurricular" element={<Extracurricular />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
