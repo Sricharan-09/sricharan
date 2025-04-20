@@ -40,7 +40,8 @@ const Navbar = () => {
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
           <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
-          <li><Link to="/education" onClick={() => setIsMenuOpen(false)}>Education</Link></li>
+          <li><Link to="/resume" onClick={() => setIsMenuOpen(false)}>Resume</Link></li>
+          <li><Link to="/extracurricular" onClick={() => setIsMenuOpen(false)}>Extracurricular</Link></li>
           <li><Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>Portfolio</Link></li>
           <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
         </ul>

@@ -14,7 +14,7 @@ const Portfolio = () => {
   const portfolioItems = [
     {
       id: 1,
-      title: "Pharmaceutical Industry Analysis",
+      title: "Capstone project",
       category: "project",
       description: "Capstone project analyzing the current landscape of the pharmaceutical industry, focusing on digital transformation opportunities and challenges.",
       file: capstoneProject,
@@ -38,17 +38,38 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      title: "Professional Resume",
-      category: "resume",
-      description: "My current professional resume detailing education, skills, experiences, and achievements.",
-      file: resume,
-      fileType: "DOCX"
+      title: "Digital Marketing Strategy for Pharmaceutical Startups",
+      category: "project",
+      description: "Comprehensive digital marketing framework developed specifically for emerging pharmaceutical companies, focusing on compliance-friendly strategies and patient engagement.",
+      file: null,
+      fileType: "PDF"
+    },
+    {
+      id: 5,
+      title: "Supply Chain Optimization Case Study",
+      category: "project",
+      description: "Analysis of pharmaceutical supply chain vulnerabilities post-pandemic with proposed solutions incorporating blockchain technology for improved tracking and transparency.",
+      file: null,
+      fileType: "PDF"
     }
+    // {
+    //   id: 6,
+    //   title: "Professional Resume",
+    //   category: "resume",
+    //   description: "My current professional resume detailing education, skills, experiences, and achievements.",
+    //   file: resume,
+    //   fileType: "DOCX"
+    // }
   ];
   
   const filteredItems = filter === 'all' 
     ? portfolioItems 
     : portfolioItems.filter(item => item.category === filter);
+
+  // Function to safely check if file exists
+  const fileExists = (file) => {
+    return file !== null && file !== undefined;
+  };
 
   return (
     <div className="portfolio-page">
@@ -82,12 +103,12 @@ const Portfolio = () => {
             >
               Certificates
             </button>
-            <button 
+            {/* <button 
               className={filter === 'resume' ? 'active' : ''} 
               onClick={() => setFilter('resume')}
             >
               Resume
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
@@ -98,20 +119,29 @@ const Portfolio = () => {
             {filteredItems.map(item => (
               <div className="portfolio-item" key={item.id}>
                 <div className="portfolio-content">
-                  <div className="document-icon">
-                    <FontAwesomeIcon icon={faFile} />
-                    <span>{item.fileType}</span>
-                  </div>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <div className="portfolio-actions">
-                    <a href={item.file} download className="btn btn-sm">
-                      <FontAwesomeIcon icon={faDownload} /> Download
-                    </a>
-                    <a href={item.file} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
-                      <FontAwesomeIcon icon={faExternalLinkAlt} /> View
-                    </a>
-                  </div>
+                  {fileExists(item.file) ? (
+                    <>
+                      <div className="document-icon">
+                        <FontAwesomeIcon icon={faFile} />
+                        <span>{item.fileType}</span>
+                      </div>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                      <div className="portfolio-actions">
+                        <a href={item.file} download className="btn btn-sm">
+                          <FontAwesomeIcon icon={faDownload} /> Download
+                        </a>
+                        <a href={item.file} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                          <FontAwesomeIcon icon={faExternalLinkAlt} /> View
+                        </a>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </>
+                  )}
                 </div>
               </div>
             ))}
