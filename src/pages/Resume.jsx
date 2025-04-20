@@ -5,6 +5,7 @@ import { useState } from 'react';
 import macroEconomicsCert from '../assets/macroEconomicsCert.jpg';
 import businessCaseDevCert from '../assets/businessCaseDevCert.jpg';
 import googleCert from '../assets/google.jpg'
+import michigan from '../assets/michigan.png';
 import resume from '../assets/resume.docx';
 import './Resume.css';
 
@@ -189,9 +190,32 @@ const Resume = () => {
                   </div>
                 </div>
                 <p>
-                Completed Google's comprehensive Python programming course, covering fundamental 
-    concepts including data structures, algorithms, and basic programming principles. 
-    Developed practical coding skills through hands-on projects and problem-solving exercises.
+                    Completed Google's comprehensive Python programming course, covering fundamental 
+                    concepts including data structures, algorithms, and basic programming principles. 
+                    Developed practical coding skills through hands-on projects and problem-solving exercises.
+                </p>
+              </div>
+            </div>
+
+            <div className="certificate-card">
+              <div className="certificate-image" onClick={() => openImagePreview(michigan)}>
+                <img src={michigan} alt="Business Case Development Certificate" />
+                <div className="view-certificate">Click to view</div>
+              </div>
+              <div className="certificate-content">
+                <h3>Writing and Editing: Structure and Organization</h3>
+                <div className="certificate-info">
+                  <div className="info-item">
+                    <FontAwesomeIcon icon={faCalendarAlt} />
+                    <span>Aug 2020</span>
+                  </div>
+                  <div className="info-item">
+                    <FontAwesomeIcon icon={faCertificate} />
+                    <span>University of Michigan</span>
+                  </div>
+                </div>
+                <p>
+                    The certificate verifies a strong foundation in professional writing techniques, editorial standards, and content clarity—skills applicable across academic, creative, and workplace communications
                 </p>
               </div>
             </div>
