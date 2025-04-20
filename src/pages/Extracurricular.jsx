@@ -17,7 +17,7 @@ const Extracurricular = () => {
           <h2 className="section-title">Leadership & Organizational Experience</h2>
           
           <div className="activities-container">
-            <div className="activity-card">
+            {/* <div className="activity-card">
               <div className="activity-icon">
                 <FontAwesomeIcon icon={faUsers} />
               </div>
@@ -40,7 +40,7 @@ const Extracurricular = () => {
                   <li>Increased club membership by 40% through strategic recruitment campaigns</li>
                 </ul>
               </div>
-            </div>
+            </div> */}
 
             <div className="activity-card">
               <div className="activity-icon">
@@ -67,7 +67,7 @@ const Extracurricular = () => {
               </div>
             </div>
 
-            <div className="activity-card">
+            {/* <div className="activity-card">
               <div className="activity-icon">
                 <FontAwesomeIcon icon={faMicrophoneAlt} />
               </div>
@@ -90,7 +90,7 @@ const Extracurricular = () => {
                   <li>Achieved 95% positive feedback from 300+ attendees through post-event surveys</li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -208,7 +208,7 @@ const Extracurricular = () => {
               </div>
             </div>
 
-            <div className="activity-card">
+            {/* <div className="activity-card">
               <div className="activity-icon">
                 <FontAwesomeIcon icon={faGraduationCap} />
               </div>
@@ -231,7 +231,7 @@ const Extracurricular = () => {
                   <li>All mentees improved their academic performance by at least one grade level</li>
                 </ul>
               </div>
-            </div>
+            </div> */}
 
             <div className="activity-card">
               <div className="activity-icon">
