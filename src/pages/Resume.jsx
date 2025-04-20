@@ -27,14 +27,14 @@ const Resume = () => {
           <h1 className="section-title">Resume</h1>
           <p className="section-subtitle">My academic journey and qualifications</p>
           
-          <div className="resume-actions">
+          {/* <div className="resume-actions">
             <a href={resume} download className="btn btn-primary">
               <FontAwesomeIcon icon={faDownload} /> Download Full Resume
             </a>
             <a href={resume} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
               <FontAwesomeIcon icon={faExternalLinkAlt} /> View Resume
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
