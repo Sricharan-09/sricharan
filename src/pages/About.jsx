@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faIdCard, faBriefcase, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import profilePic from '../assets/profilePic.jpg';
+import profilePic from '../assets/profile_pic.jpg';
 import './About.css';
 
 const About = () => {

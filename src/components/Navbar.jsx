@@ -35,14 +35,13 @@ const Navbar = () => {
           <span></span>
           <span></span>
           <span></span>
-        </div>
-
-        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+        </div>        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
           <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
           <li><Link to="/resume" onClick={() => setIsMenuOpen(false)}>Resume</Link></li>
           <li><Link to="/certifications" onClick={() => setIsMenuOpen(false)}>Certifications</Link></li>
           <li><Link to="/extracurricular" onClick={() => setIsMenuOpen(false)}>Extracurricular</Link></li>
+          <li><Link to="/recommendations" onClick={() => setIsMenuOpen(false)}>Endorsements</Link></li>
           <li><Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>Portfolio</Link></li>
           <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
         </ul>

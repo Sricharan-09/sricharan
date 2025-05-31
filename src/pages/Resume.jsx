@@ -1,11 +1,13 @@
 // filepath: c:\Users\harsh\Documents\sricharan\src\pages\Resume.jsx
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarAlt, faMapMarkerAlt, faGamepad, faMusic, faBookReader, faPlane, faCode, faChess, faDumbbell, faBlog, faCamera, faDownload, faExternalLinkAlt, faAward } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt, faMapMarkerAlt, faGamepad, faMusic, faBookReader, faPlane, faCode, faChess, faDumbbell, faBlog, faCamera, faDownload, faExternalLinkAlt, faAward, faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
 import resume from '../assets/resume.docx';
 import { Link } from 'react-router-dom';
 import './Resume.css';
-
+import introVideo from '../assets/intro_video.mp4';
+import profilePic from '../assets/profile_pic.jpg';
 const Resume = () => {
   return (
     <div className="resume-page">
@@ -24,6 +26,23 @@ const Resume = () => {
             {/* <Link to="/certifications" className="btn btn-secondary">
               <FontAwesomeIcon icon={faAward} /> View My Certifications
             </Link> */}
+          </div>
+        </div>
+      </section>
+
+      <section className="intro-video-section section">
+        <div className="container">
+          <h2 className="section-title">Introduction Video</h2>
+          <p className="section-subtitle">Get to know me better through this brief introduction</p>
+            <div className="video-container">            
+              <video 
+                controls 
+                width="100%" 
+                poster={profilePic}
+                className="intro-video">
+                <source src={introVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
           </div>
         </div>
       </section>
@@ -173,6 +192,59 @@ const Resume = () => {
               </div>
               <h3>Chess</h3>
               <p>Enjoy playing chess both casually and competitively. Member of the university chess club and participate in local tournaments when time permits.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section className="recommendations-section section">
+        <div className="container">
+          <h2 className="section-title">Recommendations</h2>
+          <p className="section-subtitle">What others say about me</p>
+          
+          <div className="recommendations-content">
+            <div className="recommendation-card">
+              <div className="recommendation-icons">
+                <FontAwesomeIcon icon={faQuoteLeft} className="quote-icon left" />
+              </div>
+              <p className="recommendation-text">
+                Check out my professional recommendation from Mukesh Narmetta on LinkedIn.
+              </p>
+              <div className="recommendation-icons">
+                <FontAwesomeIcon icon={faQuoteRight} className="quote-icon right" />
+              </div>
+              <div className="recommendation-footer">
+                <a 
+                  href="https://www.linkedin.com/recs/received/?senderId=mukesh-narmetta" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn btn-sm"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} /> View on LinkedIn
+                </a>
+              </div>
+            </div>
+            
+            <div className="recommendation-card">
+              <div className="recommendation-icons">
+                <FontAwesomeIcon icon={faQuoteLeft} className="quote-icon left" />
+              </div>
+              <p className="recommendation-text">
+                Read what Rohith Gurrapu has to say about working with me.
+              </p>
+              <div className="recommendation-icons">
+                <FontAwesomeIcon icon={faQuoteRight} className="quote-icon right" />
+              </div>
+              <div className="recommendation-footer">
+                <a 
+                  href="https://www.linkedin.com/recs/received/?senderId=rohith-gurrapu-b4826b229" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn btn-sm"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} /> View on LinkedIn
+                </a>
+              </div>
             </div>
           </div>
         </div>

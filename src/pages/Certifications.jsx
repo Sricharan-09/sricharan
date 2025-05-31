@@ -5,6 +5,8 @@ import macroEconomicsCert from '../assets/macroEconomicsCert.jpg';
 import businessCaseDevCert from '../assets/businessCaseDevCert.jpg';
 import googleCert from '../assets/google.jpg';
 import michigan from '../assets/michigan.png';
+import appreciationEntraMahindra from '../assets/appreciation_volunteer_entrepreneurship_mahindra.png';
+import membershipCertMahindra from '../assets/membership_mahindra_entranapuer.png';
 import './Certifications.css';
 
 const Certifications = () => {
@@ -90,51 +92,51 @@ const Certifications = () => {
             </div>
 
             <div className="certificate-card">
-              <div className="certificate-image" onClick={() => openImagePreview(googleCert)}>
-                <img src={googleCert} alt="Google Crash Course Certificate" />
+              <div className="certificate-image" onClick={() => openImagePreview(appreciationEntraMahindra)}>
+                <img src={appreciationEntraMahindra} alt="Google Crash Course Certificate" />
                 <div className="view-certificate">Click to view</div>
               </div>
               <div className="certificate-content">
-                <h3>Google Crash Course</h3>
+                <h3>Volunteer Certificate</h3>
                 <div className="certificate-info">
                   <div className="info-item">
                     <FontAwesomeIcon icon={faCalendarAlt} />
-                    <span>Aug 2020</span>
+                    <span>April 2023</span>
                   </div>
                   <div className="info-item">
                     <FontAwesomeIcon icon={faCertificate} />
-                    <span>Python Certification</span>
+                    <span>Mahindra University</span>
                   </div>
                 </div>
                 <p>
-                  Completed Google's comprehensive Python programming course, covering fundamental 
-                  concepts including data structures, algorithms, and basic programming principles. 
-                  Developed practical coding skills through hands-on projects and problem-solving exercises.
+                  This certificate acknowledges my contribution as a volunteer in the Entrepreneurship
+                  Development Program at Mahindra University, where I assisted in organizing events and
+                  workshops to promote entrepreneurial skills among students.
                 </p>
               </div>
             </div>
 
             <div className="certificate-card">
-              <div className="certificate-image" onClick={() => openImagePreview(michigan)}>
-                <img src={michigan} alt="University of Michigan Certificate" />
+              <div className="certificate-image" onClick={() => openImagePreview(membershipCertMahindra)}>
+                <img src={membershipCertMahindra} alt="University of Michigan Certificate" />
                 <div className="view-certificate">Click to view</div>
               </div>
               <div className="certificate-content">
-                <h3>Writing and Editing: Structure and Organization</h3>
+                <h3>Membership Certificacte</h3>
                 <div className="certificate-info">
                   <div className="info-item">
                     <FontAwesomeIcon icon={faCalendarAlt} />
-                    <span>Aug 2020</span>
+                    <span>April 2025</span>
                   </div>
                   <div className="info-item">
                     <FontAwesomeIcon icon={faCertificate} />
-                    <span>University of Michigan</span>
+                    <span>Mahindra University</span>
                   </div>
                 </div>
                 <p>
-                  This certificate verifies a strong foundation in professional writing techniques, 
-                  editorial standards, and content clarity—skills applicable across academic, creative, 
-                  and workplace communications.
+                  This certificate recognizes my active membership in the Entrepreneurship Development 
+                  Cell at Mahindra University, where I engaged in various initiatives to foster innovation 
+                  and entrepreneurship among students.
                 </p>
               </div>
             </div>

@@ -7,9 +7,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 async function generateFavicons() {
   console.log('Generating favicons from profile picture...');
-  
-  // Source image path
-  const sourceImage = path.join(__dirname, 'src', 'assets', 'profilePic.jpg');
+    // Source image path
+  const sourceImage = path.join(__dirname, 'public', 'profile_pic.jpg');
   const targetDir = path.join(__dirname, 'public', 'favicon');
   
   // Ensure favicon directory exists

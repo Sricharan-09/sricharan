@@ -51,7 +51,7 @@ const Extracurricular = () => {
                 <div className="activity-info">
                   <div className="info-item">
                     <FontAwesomeIcon icon={faCalendarAlt} />
-                    <span>2022 - Present</span>
+                    <span>2023 - Present</span>
                   </div>
                   <div className="info-item">
                     <FontAwesomeIcon icon={faMapMarkerAlt} />

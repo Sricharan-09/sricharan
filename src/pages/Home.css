@@ -255,6 +255,69 @@
   top: 0.4rem;
 }
 
+/* Recommendations Section */
+.recommendations-section {
+  background-color: #f9f9f9;
+}
+
+.recommendations-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.recommendation-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.recommendation-icons {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.quote-icon {
+  font-size: 1.5rem;
+  color: #4b6cb7;
+  opacity: 0.6;
+}
+
+.quote-icon.right {
+  margin-left: auto;
+}
+
+.recommendation-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.recommendation-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
   .hero {
@@ -284,8 +347,11 @@
   .hero-buttons {
     justify-content: center;
   }
+    .skills-content {
+    grid-template-columns: 1fr;
+  }
   
-  .skills-content {
+  .recommendations-content {
     grid-template-columns: 1fr;
   }
 }

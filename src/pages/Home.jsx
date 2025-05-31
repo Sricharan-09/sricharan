@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import profilePic from '../assets/profilePic.jpg';
+import { faArrowRight, faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import profilePic from '../assets/profile_pic.jpg';
 import './Home.css';
 
 const Home = () => {
@@ -89,6 +89,17 @@ const Home = () => {
                 <li>Photography</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>      <section className="recommendations-preview section">
+        <div className="container">
+          <h2 className="section-title">Professional Recommendations</h2>
+          <div className="recommendations-preview-content">
+            <p>
+              View professional endorsements and references from my industry connections.
+            </p>            <Link to="/recommendations" className="btn">
+              View Endorsements <FontAwesomeIcon icon={faArrowRight} />
+            </Link>
           </div>
         </div>
       </section>

@@ -9,6 +9,7 @@ import Extracurricular from './pages/Extracurricular';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Certifications from './pages/Certifications';
+import Recommendations from './pages/Recommendations';
 import './App.css';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/extracurricular" element={<Extracurricular />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/recommendations" element={<Recommendations />} />
             {/* Add a catch-all route to handle any undefined routes */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
