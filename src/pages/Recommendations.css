@@ -15,9 +15,12 @@
 
 .recommendations-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2.5rem;
   margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .recommendation-card {
@@ -29,6 +32,25 @@
   flex-direction: column;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommendation-image {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.endorsement-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.endorsement-image:hover {
+  transform: scale(1.02);
 }
 
 .recommendation-card:hover {
